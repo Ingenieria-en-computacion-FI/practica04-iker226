@@ -10,12 +10,20 @@ int main() {
 
     // Ejercicio 2
     Nodo* arreglo = crearArregloNodos(5);
-    // TODO(1): imprimir arreglo
+    printf("Arreglo de nodo:\n");
+    for(int i=0; i<5; i++){
+        printf("%d ", arreglo[i].dato);
+    }
+    printf("\n ");
 
     // Ejercicio 3
     int tam = 5;
     arreglo = agregarNodo(arreglo, &tam, 99);
-    // TODO(2): imprimir arreglo actualizado
+    printf("Arreglo actualizado:\n");
+    for(int i=0; i<tam; i++){
+        printf("%d ", arreglo[i].dato);
+    }
+    printf("\n");
 
     // Ejercicio 4
     liberarNodos(arreglo, tam);
@@ -23,7 +31,13 @@ int main() {
 
     // Ejercicio 5
     Nodo* inicio = construirTresNodos();
-    // TODO(3): imprimir nodos
+    printf("Lista construida:\n");
+    Nodo* actual=inicio;
+    while(actual!=NULL){
+        printf("%d -> ", actual->dato);
+        actual=actual->siguiente;
+    }
+    printf("NULL\n");
 
     // Ejercicio 6
     int total = contarNodos(inicio);
@@ -31,7 +45,13 @@ int main() {
 
     // Ejercicio 7
     Nodo* desdeEntrada = crearNodosPorEntrada();
-    // TODO(4): imprimir nodos
+    printf("Lista de entrada:\n");
+    actual=desdeEntrada;
+    while(actual!=NULL){
+        printf("%d -> ", actual->dato);
+        actual = actual->siguiente;
+    }
+    printf("NULL\n");
 
     return 0;
 }
