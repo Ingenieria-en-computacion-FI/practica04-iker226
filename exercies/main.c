@@ -44,6 +44,7 @@ int main() {
     printf("Total de nodos: %d\n", total);
 
     // Ejercicio 7
+    printf("Ingresa numeros para crear nodos por entrada(0 para terminar):\n");
     Nodo* desdeEntrada = crearNodosPorEntrada();
     printf("Lista de entrada:\n");
     actual=desdeEntrada;
